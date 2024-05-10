@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cinexperto</string>
+    <string name="description_app">Desafía tus conocimientos cinéfilos con una app de trivias repleta de preguntas sobre el mundo del cine.</string>
+    <string name="msg_validate_pwd">*Debe tener mínimo 6 caracteres con números y letras</string>
+    <string name="verfy_account_description">Te hemos enviado un código a tu email registrado</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="preferences_key">preferences_key</string>
+</resources>

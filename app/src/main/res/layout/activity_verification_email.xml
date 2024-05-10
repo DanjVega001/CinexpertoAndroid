@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.auth.ui.views.activities.VerificationEmailActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view_validate_code"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerValidateCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="550dp"
+        android:background="@color/color_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="349dp"
+            android:layout_marginStart="232dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circulo" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/alata"
+            android:text="Verifica tu cuenta"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.422" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/alata"
+            android:text="@string/verfy_account_description"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.701" />
+
+        <ImageButton
+            android:id="@+id/btnBackToRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/color_main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arrow_back" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/bodyValidateCode"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:background="@drawable/back_auth_screen"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="50dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerValidateCode">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etxtCode1"
+                android:layout_width="51dp"
+                android:layout_height="65dp"
+                android:nextFocusRight="@id/etxtCode2"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/back_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="numberSigned"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_hint"
+                android:textSize="30sp"
+                android:maxLength="1"
+                />
+
+            <EditText
+                android:id="@+id/etxtCode2"
+                android:layout_width="51dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/back_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="numberSigned"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_hint"
+                android:textSize="30sp"
+                android:maxLength="1"
+                />
+
+            <EditText
+                android:id="@+id/etxtCode3"
+                android:layout_width="51dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/back_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="numberSigned"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_hint"
+                android:textSize="30sp"
+                android:maxLength="1"
+                />
+
+            <EditText
+                android:id="@+id/etxtCode4"
+                android:layout_width="51dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/back_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="numberSigned"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_hint"
+                android:textSize="30sp"
+                android:maxLength="1"
+                />
+
+            <EditText
+                android:id="@+id/etxtCode5"
+                android:layout_width="51dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/back_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="numberSigned"
+                android:paddingLeft="15dp"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_hint"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/etxtCode6"
+                android:layout_width="51dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/back_edit_text"
+                android:ems="10"
+                android:fontFamily="@font/alata"
+                android:inputType="numberSigned"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color_hint"
+                android:maxLength="1"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnVerifyCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/back_button_primary"
+            android:fontFamily="@font/alata"
+            android:text="Verificar"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
