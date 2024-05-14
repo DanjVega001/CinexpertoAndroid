@@ -4,4 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_main">#7F52FF</color>
     <color name="color_hint">#767676</color>
+    <color name="color_second">#B125EA</color>
+    <color name="color_third">#E24462</color>
+    <color name="color_lvl1">#9A75FF</color>
+    <color name="color_lvl2">#7F52FF</color>
+    <color name="color_lvl3">#6630FF</color>
+
+
 </resources>

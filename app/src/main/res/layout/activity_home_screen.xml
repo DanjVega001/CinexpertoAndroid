@@ -7,15 +7,62 @@
     android:background="@color/white"
     tools:context=".HomeScreenActivity">
 
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOME SCREEN!!"
-        android:textColor="@color/black"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnGoAnswerTrivia"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back_menu_btn_1"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:fontFamily="@font/alata"
+            android:paddingLeft="60dp"
+            android:paddingRight="20dp"
+            android:text="Responde Trivias"
+            android:textAllCaps="false"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btnGoCreateTrivia"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back_menu_btn_2"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:fontFamily="@font/alata"
+            android:paddingLeft="60dp"
+            android:paddingRight="20dp"
+            android:text="Crea Trivias"
+            android:textAllCaps="false"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btnGoClassification"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back_menu_btn_3"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            android:fontFamily="@font/alata"
+            android:paddingLeft="60dp"
+            android:paddingRight="20dp"
+            android:text="Clasificación"
+            android:textAllCaps="false"
+            android:textSize="22sp" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
