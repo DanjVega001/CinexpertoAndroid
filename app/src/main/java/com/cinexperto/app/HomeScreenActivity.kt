@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cinexperto.app.databinding.ActivityHomeScreenBinding
-import com.cinexperto.app.features.trivia.ui.views.fragments.AnswerTriviaActivity
+import com.cinexperto.app.features.trivia.ui.views.activities.AnswerTriviaActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

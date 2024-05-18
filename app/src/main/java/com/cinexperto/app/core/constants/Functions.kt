@@ -1,10 +1,13 @@
 package com.cinexperto.app.core.constants
 
+import android.content.Context
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.widget.EditText
 import arrow.core.Either
+import com.cinexperto.app.R
+import com.cinexperto.app.core.util.ManageSharedPreferences
 import com.cinexperto.app.databinding.ActivityVerificationEmailBinding
 import org.json.JSONObject
 
@@ -56,6 +59,10 @@ object Functions {
 
             override fun afterTextChanged(s: Editable?) {}
         })
+    }
+
+    fun getAccessToken(context: Context):String{
+        return "Bearer ${ManageSharedPreferences.getPreferences("token", context)}"
     }
 
 }

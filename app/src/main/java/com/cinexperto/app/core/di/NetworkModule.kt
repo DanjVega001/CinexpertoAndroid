@@ -4,6 +4,7 @@ import com.cinexperto.app.core.constants.Constants
 import com.cinexperto.app.features.auth.data.network.AuthApiClient
 import com.cinexperto.app.features.auth.data.repositories.AuthRepositoryImpl
 import com.cinexperto.app.features.auth.domain.repositories.AuthRepository
+import com.cinexperto.app.features.trivia.data.network.TriviaApiClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,6 +30,12 @@ class NetworkModule {
     @Provides
     fun provideAuthApiClient(retrofit: Retrofit) : AuthApiClient {
         return retrofit.create(AuthApiClient::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideTriviaApiClient(retrofit: Retrofit) : TriviaApiClient {
+        return retrofit.create(TriviaApiClient::class.java)
     }
 
 

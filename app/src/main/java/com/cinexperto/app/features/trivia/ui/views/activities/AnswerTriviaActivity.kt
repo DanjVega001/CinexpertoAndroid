@@ -1,4 +1,4 @@
-package com.cinexperto.app.features.trivia.ui.views.fragments
+package com.cinexperto.app.features.trivia.ui.views.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +25,10 @@ class AnswerTriviaActivity : AppCompatActivity() {
     private fun setupButtons(){
         binding.btnBackToHomeFromTrv.setOnClickListener {
             startActivity(Intent(this, HomeScreenActivity::class.java))
+            finish()
+        }
+        binding.btnGoTriviasLvl1.setOnClickListener {
+            startActivity(Intent(this, TriviaLevelOneActivity::class.java))
             finish()
         }
     }
