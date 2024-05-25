@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.cinexperto.app.R
 import com.cinexperto.app.features.trivia.data.models.GetTriviasDto
 
-class TriviaViewHolder(view: View) : ViewHolder(view) {
+class TriviaViewHolder(view: View, private val color: Int) : ViewHolder(view) {
 
     private val btnSingleTriviaLvlOneAnswered:Button = view.findViewById(R.id.btnSingleTriviaLvlOneAnswered)
     private val btnSingleTriviaLvlOne:Button = view.findViewById(R.id.btnSingleTriviaLvlOne)
@@ -17,6 +17,7 @@ class TriviaViewHolder(view: View) : ViewHolder(view) {
 
     fun bind (item:GetTriviasDto) {
         if (item.state == "pendiente") {
+            btnSingleTriviaLvlOne.setBackgroundColor(color)
             btnSingleTriviaLvlOne.text = item.consecutive.toString()
             btnSingleTriviaLvlOne.visibility = View.VISIBLE
             btnSingleTriviaLvlOneAnswered.visibility = View.GONE

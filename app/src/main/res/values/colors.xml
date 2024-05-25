@@ -9,6 +9,10 @@
     <color name="color_lvl1">#9A75FF</color>
     <color name="color_lvl2">#7F52FF</color>
     <color name="color_lvl3">#6630FF</color>
+    <color name="color_create_prtv">#B125EA</color>
+    <color name="color_aceptadas_prtv">#217115</color>
+    <color name="color_rechazadas_prtv">#A51414</color>
+    <color name="color_pendientes_prtv">#5C5B5D</color>
 
 
 </resources>

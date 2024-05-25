@@ -4,4 +4,7 @@ object Constants {
 
     const val URL_API:String = "http://192.168.1.67:8000/api/auth/"
     const val LEVEL_ID_ONE = 1
+    const val LEVEL_ID_TWO = 2
+    const val LEVEL_ID_THREE = 3
+
 }

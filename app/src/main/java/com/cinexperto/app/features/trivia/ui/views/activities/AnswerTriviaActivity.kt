@@ -31,6 +31,14 @@ class AnswerTriviaActivity : AppCompatActivity() {
             startActivity(Intent(this, TriviaLevelOneActivity::class.java))
             finish()
         }
+        binding.btnGoTriviasLvl2.setOnClickListener {
+            startActivity(Intent(this, TriviaLevelTwoActivity::class.java))
+            finish()
+        }
+        binding.btnGoTriviasLvl3.setOnClickListener {
+            startActivity(Intent(this, TriviaLevelThreeActivity::class.java))
+            finish()
+        }
     }
 
 

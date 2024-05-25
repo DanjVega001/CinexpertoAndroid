@@ -13,20 +13,20 @@ import com.cinexperto.app.R
 import com.cinexperto.app.core.constants.Constants
 import com.cinexperto.app.core.constants.Functions
 import com.cinexperto.app.core.fragments.ProgressFragment
-import com.cinexperto.app.databinding.ActivityTriviaLevelOneBinding
+import com.cinexperto.app.databinding.ActivityTriviaLevelTwoBinding
 import com.cinexperto.app.features.trivia.ui.viewmodels.GetTriviasViewModel
 import com.cinexperto.app.features.trivia.ui.views.adapters.ItemTriviaAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class TriviaLevelOneActivity : AppCompatActivity() {
+class TriviaLevelTwoActivity : AppCompatActivity() {
 
-    private val getTriviasViewModel:GetTriviasViewModel by viewModels()
-    private lateinit var binding:ActivityTriviaLevelOneBinding
+    private lateinit var binding : ActivityTriviaLevelTwoBinding
+    private val getTriviasViewModel: GetTriviasViewModel by viewModels()
     private var isError = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTriviaLevelOneBinding.inflate(layoutInflater)
+        binding = ActivityTriviaLevelTwoBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 
@@ -40,7 +40,7 @@ class TriviaLevelOneActivity : AppCompatActivity() {
     }
 
     private fun initData(){
-        getTriviasViewModel.getTrivias(Constants.LEVEL_ID_ONE, Functions.getAccessToken(this))
+        getTriviasViewModel.getTrivias(Constants.LEVEL_ID_TWO, Functions.getAccessToken(this))
     }
 
     private fun fetchError() {
@@ -55,12 +55,9 @@ class TriviaLevelOneActivity : AppCompatActivity() {
 
     private fun fetchData() {
         getTriviasViewModel.data.observe(this, Observer {
-            binding.rvTriviaLevelOne.setHasFixedSize(true)
-            binding.rvTriviaLevelOne.layoutManager = LinearLayoutManager(this)
-            binding.rvTriviaLevelOne.adapter = ItemTriviaAdapter(
-                it,
-                ContextCompat.getColor(this, R.color.color_lvl1)
-            )
+            binding.rvTriviaLevelTwo.setHasFixedSize(true)
+            binding.rvTriviaLevelTwo.layoutManager = LinearLayoutManager(this)
+            binding.rvTriviaLevelTwo.adapter = ItemTriviaAdapter(it, ContextCompat.getColor(this, R.color.color_lvl2))
         })
     }
 
@@ -68,18 +65,18 @@ class TriviaLevelOneActivity : AppCompatActivity() {
         val fragmentLoading = ProgressFragment()
         getTriviasViewModel.isLoading.observe(this, Observer {
             if (it) {
-                binding.rvTriviaLevelOne.visibility = View.GONE
+                binding.rvTriviaLevelTwo.visibility = View.GONE
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container_view_getTrivias_lvl_1, fragmentLoading)
+                    .replace(R.id.fragment_container_view_getTrivias_lvl_2, fragmentLoading)
                     .commit()
             } else {
-                binding.rvTriviaLevelOne.visibility = View.VISIBLE
+                binding.rvTriviaLevelTwo.visibility = View.VISIBLE
             }
         })
     }
 
     private fun setupButtons(){
-        binding.btnBackToLevelsTrvFromTrvOne.setOnClickListener {
+        binding.btnBackToLevelsTrvFromTrvTwo.setOnClickListener {
             startActivity(Intent(this, AnswerTriviaActivity::class.java))
             finish()
         }

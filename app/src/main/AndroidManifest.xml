@@ -17,6 +17,15 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".features.trivia.ui.views.activities.PublishedTriviaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.trivia.ui.views.activities.TriviaLevelThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.trivia.ui.views.activities.TriviaLevelTwoActivity"
+            android:exported="false" />
+        <activity
             android:name=".features.trivia.ui.views.activities.TriviaLevelOneActivity"
             android:exported="false" />
         <activity

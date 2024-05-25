@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cinexperto.app.databinding.ActivityHomeScreenBinding
 import com.cinexperto.app.features.trivia.ui.views.activities.AnswerTriviaActivity
+import com.cinexperto.app.features.trivia.ui.views.activities.PublishedTriviaActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,6 +27,9 @@ class HomeScreenActivity : AppCompatActivity() {
         binding.btnGoAnswerTrivia.setOnClickListener {
             startActivity(Intent(this, AnswerTriviaActivity::class.java))
             //finish()
+        }
+        binding.btnGoCreateTrivia.setOnClickListener {
+            startActivity(Intent(this, PublishedTriviaActivity::class.java))
         }
     }
 }

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".features.trivia.ui.views.activities.PublishedTriviaActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_header_published_trv"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBackToHomeFromTrv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/color_second"
+                app:srcCompat="@drawable/arrow_back" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/alata"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="Trivias publicadas"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnGoPTriviasCreate"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back_btn_ptrv_create"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:fontFamily="@font/alata"
+                android:paddingLeft="60dp"
+                android:paddingRight="20dp"
+                android:text="Crear Trivia"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/btnGoPTriviasAceptadas"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back_btn_ptrv_aceptadas"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:fontFamily="@font/alata"
+                android:paddingLeft="60dp"
+                android:paddingRight="20dp"
+                android:text="Trivias aceptadas"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/btnGoPTriviasRehazadas"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back_btn_ptrv_rechazadas"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:fontFamily="@font/alata"
+                android:paddingLeft="60dp"
+                android:paddingRight="20dp"
+                android:text="Trivias rechazadas"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/btnGoPTriviasPendientes"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/back_btn_ptrv_pendientes"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:fontFamily="@font/alata"
+                android:paddingLeft="60dp"
+                android:paddingRight="20dp"
+                android:text="Trivias pendientes"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
