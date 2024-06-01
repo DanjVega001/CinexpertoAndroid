@@ -13,6 +13,6 @@
     <color name="color_aceptadas_prtv">#217115</color>
     <color name="color_rechazadas_prtv">#A51414</color>
     <color name="color_pendientes_prtv">#5C5B5D</color>
-
+    <color name="color_gray">#E3E3E3</color>
 
 </resources>

@@ -17,19 +17,28 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".features.trivia.ui.views.activities.PublishedTriviaActivity"
+            android:name=".features.trivia.ui.views.activities.published_trivia.PublishedTriviasPending"
             android:exported="false" />
         <activity
-            android:name=".features.trivia.ui.views.activities.TriviaLevelThreeActivity"
+            android:name=".features.trivia.ui.views.activities.published_trivia.PublishedTriviasRejected"
             android:exported="false" />
         <activity
-            android:name=".features.trivia.ui.views.activities.TriviaLevelTwoActivity"
+            android:name=".features.trivia.ui.views.activities.published_trivia.PublishedTriviasAccepted"
             android:exported="false" />
         <activity
-            android:name=".features.trivia.ui.views.activities.TriviaLevelOneActivity"
+            android:name=".features.trivia.ui.views.activities.published_trivia.PublishedTriviaActivity"
             android:exported="false" />
         <activity
-            android:name=".features.trivia.ui.views.activities.AnswerTriviaActivity"
+            android:name=".features.trivia.ui.views.activities.trivia.TriviaLevelThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.trivia.ui.views.activities.trivia.TriviaLevelTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.trivia.ui.views.activities.trivia.TriviaLevelOneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.trivia.ui.views.activities.trivia.AnswerTriviaActivity"
             android:exported="false" />
         <activity
             android:name=".HomeScreenActivity"

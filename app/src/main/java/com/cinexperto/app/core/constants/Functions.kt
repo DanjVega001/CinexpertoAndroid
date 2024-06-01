@@ -20,6 +20,7 @@ object Functions {
 
     fun parseErrorToJson(errorBody:String?) :String{
         return if (!errorBody.isNullOrEmpty()) {
+            Log.d("error", errorBody)
             val jsonObject = JSONObject(errorBody)
             val errorMessage = jsonObject.getString("error")
             errorMessage

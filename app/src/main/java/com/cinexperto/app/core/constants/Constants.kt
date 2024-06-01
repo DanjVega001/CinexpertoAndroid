@@ -6,5 +6,8 @@ object Constants {
     const val LEVEL_ID_ONE = 1
     const val LEVEL_ID_TWO = 2
     const val LEVEL_ID_THREE = 3
+    const val ACCEPTED_STATE = "aceptada"
+    const val REJECTED_STATE = "rechazada"
+    const val PENDING_STATE = "pendiente"
 
 }
